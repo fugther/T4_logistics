@@ -17,4 +17,5 @@
         where u.login_id = #{loginId}
     </select>
 
+
 </mapper>
