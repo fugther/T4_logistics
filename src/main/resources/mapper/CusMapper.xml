@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.CusDao">
+    <select id="selectAllCusCode" resultType="string">
+       select customer_code from customerinfo
+    </select>
+
+    <select id="findByCustomerCode" parameterType="string" resultType="com.qf.entity.CustomerInfo">
+        select * from customerinfo where customer_code=#{customer_code}
+    </select>
+</mapper>
